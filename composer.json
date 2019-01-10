@@ -1,0 +1,29 @@
+{
+    "name": "ib/tuggertoys",
+    "type": "typo3-cms-extension",
+    "description": "Tugger Toys Website",
+    "authors": [
+        {
+            "name": "Eric Yee",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ib\\Tuggertoys\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ib\\Tuggertoys\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "tuggertoys": "self.version",
+        "typo3-ter/tuggertoys": "self.version"
+    }
+}
