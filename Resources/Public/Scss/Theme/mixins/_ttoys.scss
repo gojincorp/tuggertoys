@@ -1,0 +1,11 @@
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-ttoys-main-content() {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}

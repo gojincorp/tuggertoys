@@ -6,15 +6,10 @@
     <a class="sr-only sr-only-focusable" href="#page-content">
         <span>{f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}</span>
     </a>
-    <f:render partial="Navigation/Main" arguments="{_all}" />
-    <f:render section="Border" optional="true" />
 	<div class="container-fluid ttoys ttoys-main">
     <div class="row">
     <div class="col-sm-1 d-none d-sm-block ttoys ttoys-main-left-col"></div>
     <div class="col-sm-10 ttoys ttoys-main-content">
-    <div class="row ttoys ttoys-breadcrumb">
-    <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
-    </div>
     <div class="row" style="margin: 0px;">
     <div id="page-content" class="bp-page-content main-section col-12" style="padding: 0px;">
         <!--TYPO3SEARCH_begin-->
@@ -35,29 +30,6 @@
     </footer>
     <f:render partial="Structure/ScrollTop" arguments="{_all}" />
 </div>
-
-<!-- Modal https://codepen.io/JacobLett/pen/xqpEYE -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      
-      <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>        
-        <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
-</div>
-        
-        
-      </div>
-
-    </div>
-  </div>
-</div> 
 
 <div class="device-xs visible-xs" id="show-xs"></div>
 <div class="device-sm visible-sm" id="show-sm"></div>

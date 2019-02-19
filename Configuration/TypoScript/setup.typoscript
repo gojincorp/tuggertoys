@@ -1,0 +1,51 @@
+page {
+	10.dataProcessing.30 {
+		special.range = 1|-1
+	}
+	
+    includeCSSLibs {
+#		bootstrap_3_3_7 = EXT:eric_yee/Resources/Public/Css/Vendor/bootstrap.min.css
+    }
+
+    includeCSS {
+        theme = EXT:tuggertoys/Resources/Public/Scss/Theme/theme.scss
+    }
+    
+    
+
+    includeJSLibs {
+#		jquery_3_3_1 = EXT:eric_yee/Resources/Public/Javascript/vendor/jquery-3.3.1.min.js
+#		jquery_responsiveimages = EXT:eric_yee/Resources/Public/Javascript/vendor/jquery.responsiveimages.min.js
+		fontAwesome = https://use.fontawesome.com/releases/v5.7.1/js/all.js
+		fontAwesome.external = 1
+		fontAwesome.integrity = sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1
+		cdn_jquery = https://code.jquery.com/jquery-3.3.1.min.js
+		cdn_jquery.external = 1
+		cdn_jquery.integrity = sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=
+    }
+
+    includeJS {
+#		recaptcha = https://www.google.com/recaptcha/api.js
+    }
+
+    includeJSFooterlibs {
+#		modernizer_3_6_0 = EXT:eric_yee/Resources/Public/Javascript/vendor/modernizr-3.6.0.min.js
+#		jquery_ui = EXT:eric_yee/Resources/Public/Javascript/vendor/jquery-ui.min.js
+#		bootstrap_3_3_7 = EXT:eric_yee/Resources/Public/Javascript/Vendor/bootstrap.min.js
+#		holder = EXT:eric_yee/Resources/Public/Javascript/vendor/holder.min.js
+    }
+
+    includeJSFooter {
+#        eric_yee_scripts = EXT:eric_yee/Resources/Public/JavaScript/Dist/scripts.js
+#        eric_yee = EXT:eric_yee/Resources/Public/JavaScript/ericyee.js
+        
+		cdn_lazy = https://cdn.jsdelivr.net/npm/jquery-lazy@1.7.10/jquery.lazy.min.js
+		cdn_lazy.external = 1        
+		cdn_lazy_plugin = https://cdn.jsdelivr.net/npm/jquery-lazy@1.7.10/jquery.lazy.plugins.min.js
+		cdn_lazy_plugin.external = 1
+        ttoys = EXT:tuggertoys/Resources/Public/JavaScript/ttoys.js
+    }
+    meta {
+    	p:domain_verify = ce3200e91926f6b5fc1ac2ec40b77aa0
+    }
+}

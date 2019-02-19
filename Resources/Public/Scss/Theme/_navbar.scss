@@ -1,0 +1,223 @@
+
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+//
+// Transision
+//
+@media (min-width: ($grid-float-breakpoint)) {
+	.navbar {
+	  align-items: center;
+	}
+}
+
+//
+// Toggler
+//
+.navbar-toggler {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+}
+
+//
+// Position Fixed
+//
+.navbar-mainnavigation {
+	box-shadow: 0px 1px 0px 0px rgba(220,220,220,1);
+    font-weight: 800;
+}
+
+.navbar-mainnavigation .navbar-brand {
+    margin-right: 0px;
+}
+
+
+//
+// Brand
+//
+.navbar-mainnavigation {
+    .navbar-brand-image {
+        padding: 0px;
+        img {
+//          max-height: map-get($navbar-heights, xs) - 0; 
+            max-height: 90%; 
+        }
+    }
+}
+
+//
+// Dropdown
+//
+.navbar-mainnavigation {
+    @media (max-width: ($grid-float-breakpoint - 1)) {
+        .dropdown-item {
+            padding-left: 3.5rem;
+        }
+    }
+}
+
+//
+// Status
+//
+.navbar-mainnavigation {
+    .navbar-nav > li {
+        > .nav-link::before {
+            background: $gray-900;
+        }
+    }
+}
+
+//
+// Transision
+//
+.navbar-transition {
+    .navbar-brand-image {
+	    img {
+//	        max-height: map-get($navbar-heights, xs) - 0;
+            max-height: 100%; 
+	    }
+    }
+}
+@media (max-width: ($grid-float-breakpoint - 1)) {
+    .navbar-mainnavigation {
+        .navbar-nav {
+            .nav-link {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+//
+// Breakpoint
+// Bootstrap 4 only allows breakpoints to be fixed at viewports this removes
+// a lot of flexibility, so we introduce the legacy float breakpoint again.
+//
+@media (max-width: ($grid-float-breakpoint - 1)) {
+    .navbar-mainnavigation {
+        &.navbar-default.ttoys.ttoys-navbar {
+        	.ttoys.ttoys-header-top {
+	            a:not(.active) {
+	                color: $navbar-light-color;
+	                @include hover-focus {
+	                    color: $navbar-light-hover-color;
+	                }
+	            }
+        	}
+        }
+        &.navbar-inverse.ttoys.ttoys-navbar {
+        	.ttoys.ttoys-header-top {
+	            a:not(.active) {
+	                color: $navbar-light-color;
+	                @include hover-focus {
+	                    color: $navbar-light-hover-color;
+	                }
+	            }
+	        }
+        }
+    }
+}
+@media (min-width: $grid-float-breakpoint) {
+    .navbar-mainnavigation {
+        flex-flow: column nowrap;
+        > .container,
+        > .container-fluid {
+        	flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+    
+	.ttoys.ttoys-navbar .navbar-nav {
+		flex-direction: row;
+	}
+
+	.navbar-nav .nav-link {
+	    padding: 0.5rem 1rem;
+	}
+    
+	.ttoys.ttoys-navbar {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.ttoys-navbar .navbar-collapse {
+		padding-left:  100% !important;
+		padding-right: 100% !important;
+		white-space: nowrap;
+		//background-color: #4c4c4c;
+	}
+	
+	.ttoys-navbar .nav-item > .nav-link,
+	.ttoys-navbar .nav-item > .nav-link:hover,
+	.ttoys-navbar .nav-item > .nav-link:focus {
+		//color: #ffffff !important;
+	}
+}
+
+.ttoys.ttoys-navbar .navbar {
+	flex-direction: row;
+}
+
+.ttoys.ttoys-header-top {
+	width: 100%;
+	padding: 0px $navbar-padding-x 0px $navbar-padding-x;
+	background-color:  white;
+	//box-sizing: border-box;
+}
+
+.ttoys.ttoys-login {
+	padding-top: $navbar-padding-y;
+}
+
+
+//
+// Navigation Style
+//
+.navbar-inverse {
+  .breadcrumb {
+    .breadcrumb-link {
+      font-weight: 800;
+      color: $navbar-dark-color;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .breadcrumb-link,
+    .active > .breadcrumb-link,
+    .breadcrumb-link.show,
+    .breadcrumb-link.active {
+      color: $nav-tabs-link-active-color;
+    }
+  }
+
+  .breadcrumb-text {
+    font-weight: 800;
+    color: #fff;
+    a {
+      color: #fff;
+
+      @include hover-focus {
+        color: #fff;
+      }
+    }
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+  	color: #fff;
+  }
+}

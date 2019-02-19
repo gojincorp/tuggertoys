@@ -1,0 +1,286 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Files
+//
+//@import "../../Contrib/bootstrap4/scss/bootstrap";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme.scss";
+
+//
+// Tugger Toys Mixins
+//
+@import "mixins";
+
+@if $enable-grid-classes {
+  .ttoys.ttoys-main-content {
+    @include make-ttoys-main-content();
+    @include make-container-max-widths();
+  }
+  .ttoys.ttoys-header-main {
+    @include make-container-max-widths();
+  }
+}
+
+
+//
+// Components
+//
+@import "navbar";
+
+//
+// Native CSS
+//
+//.container.ttoys.ttoys-logo {
+//	display: block;
+//}
+//.container-fluid.ttoys.ttoys-main {
+//  padding-right: 0px;
+//  padding-left: 0px;
+//}
+body {
+	margin: 0px;
+	//background-color: black;
+}
+*, *::before, *::after {
+    //box-sizing: content-box; 
+}
+
+#page-header {
+	z-index: 2;
+}
+
+.bp-page-header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+}
+
+.ttoys.ttoys-breadcrumb {
+	position: -webkit-sticky;
+	position: sticky;
+	
+	@media (max-width: $grid-float-breakpoint - 1) {
+		display: none;
+	}
+	
+	@media all {
+		top: 207px;
+	}
+	@media (max-width: map-get($grid-breakpoints, lg) - 1) {
+		top: 201px;
+	}
+	@media (max-width: map-get($grid-breakpoints, md) - 1) {
+		top: 161px;
+	}
+	@media (max-width: map-get($grid-breakpoints, sm) - 1) {
+		top: 141px;
+	}
+	z-index: 1;
+	margin: 0px;
+}
+
+.navbar .breadcrumb {
+	padding: 0rem 0rem;
+}
+
+.navbar-brand.ttoys-mobile-breadcrumb {
+	@media (min-width: $grid-float-breakpoint) {
+		display: none;
+	}
+	height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    .breadcrumb-section {
+    	background-color: transparent;
+    	.container {
+    		background-color: transparent;
+    		.breadcrumb {
+    			background-color: transparent;
+    		}
+    	}
+    }
+}
+
+.ttoys.ttoys-breadcrumb.lower-top {
+	top: 190px;
+}
+
+.ttoys.ttoys-media {
+	position: -webkit-sticky;
+	position: sticky;
+	@media all {
+		top: 269px;
+	}
+	@media (max-width: map-get($grid-breakpoints, lg) - 1) {
+		top: 223px;
+	}
+	@media (max-width: map-get($grid-breakpoints, md) - 1) {
+		top: 183px;
+	}
+	@media (max-width: map-get($grid-breakpoints, sm) - 1) {
+		top: 163px;
+	}
+}
+
+.ttoys.ttoys-navbar {
+	background-color: $white;
+}
+
+.ttoys.ttoys-navbar #mainnavigation {
+	background-color: $dark;
+}
+
+.ttoys.ttoys-navbar #mainnavigation .nav-item > a{
+	text-transform: uppercase;
+}
+
+.ttoys.ttoys-main-left-col {
+  background-image: url("../../images/paws_n_bones.jpg");
+  background-repeat: repeat;
+  background-position:  right 93px top;
+  //border-top: 1px solid #d9d9d9;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  margin-top: 1px;
+}
+.ttoys.ttoys-main-right-col {
+  background-image: url("../../images/paws_n_bones.jpg");
+  background-repeat: repeat;
+  background-position:  left 93px top;
+  //border-top: 1px solid #d9d9d9;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  margin-top: 1px;
+}
+
+.ttoys-main, .ttoys-main * {
+	//box-sizing: border-box;
+}
+
+.ttoys-main-content {
+//	padding-left: 20px !important;
+//	padding-right: 20px !important;
+  margin-top: 1px;
+  .section {
+  	overflow: visible;
+  }
+}
+
+.breadcrumb-section {
+	background-color: transparent;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.breadcrumb-section > .container {
+	background-color: #f2f2f2;
+}
+
+#mainnavigation {
+	width: 100%;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#mainnavigation .navbar-nav {
+	margin: 0px auto;
+}
+
+
+// For each breakpoint, define the maximum width of the Amazon product image in a media query
+@mixin make-amazon-img-max-size($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width * .2;
+      max-height: $container-max-width * .2;
+    }
+  }
+}
+
+.amazon-src-img-lg {
+	max-width: map-get($container-max-widths, sm) * .15;
+	max-height: map-get($container-max-widths, sm) * .15;
+	@include make-amazon-img-max-size();
+	
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+.btn, .cc-btn {
+//	border-radius: .25rem;
+}
+
+.ttoys-sprite {
+	background-image: url("../../images/ttoys-nsa-sprite-2x.png");
+}
+
+.ttoys-paws-tray, .ttoys-paws {
+	display: inline-block;
+	background-position: -3.75px -3.3px;
+	background-size: 341.7px 96px;
+	height: 20.5px;
+	margin-top: 1px;
+	position: relative;
+	vertical-align: baseline;
+	width: 102.75px;
+}
+
+.ttoys-paws {
+	display: inline-block;
+	background-position: -124.7px -4px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 500;
+}
+
+.ttoys-feuser-frame {
+	//max-width: 600px;
+}
+
+.tx-srfeuserregister-pi1 input {
+    padding: 0.375rem 0.75rem;
+}
+
+.tx-srfeuserregister-pi1 dt {
+    width: 40%;
+}
+
+.tx-srfeuserregister-pi1 dd {
+    width: 60%;
+}
+
+
+.modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+  }
+
+.fa-inverse {
+    color: #4c4c4c;
+}
+
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}

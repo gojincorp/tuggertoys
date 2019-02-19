@@ -1,39 +1,57 @@
-############################
-### CUSTOM SUBCATEGORIES ###
-###########################
-# customsubcategory=100=Page Template
-# customsubcategory=110=Logo
-
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/ContentElement/constants.typoscript">
-
 ############
 ### PAGE ###
 ############
 page {
+	preloader.enable = 0
+
     logo {
-        # cat=bootstrap package: logo/110/100; type=string; label=Logo: Leave blank to use website title from template instead
         file = EXT:tuggertoys/Resources/Public/Images/logo.svg
-        # cat=bootstrap package: logo/110/110; type=string; label=Logo Inverted: Leave blank to use website title from template instead
-        fileInverted = EXT:bootstrap_package/Resources/Public/Images/BootstrapPackageInverted.svg
-        # cat=bootstrap package: logo/110/120; type=int+; label=Height: The image will not be resized!
-        height = 151
-        # cat=bootstrap package: logo/110/130; type=int+; label=Width: The image will not be resized!
-        width = 64
-        # cat=bootstrap package: logo/110/140; type=string; label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo")
-        alt =
-        # cat=bootstrap package: logo/110/150; type=string; label=Link title: Title of the link attribute of the logo image
-        linktitle =
+        fileInverted = EXT:tuggertoys/Resources/Public/Images/logo.svg
+        height = 150
+        width = 354
+    }
+
+    theme {
+    	navigation.style = inverse
+        copyright {
+            enable = 1
+            text = Copyright &copy; 2019 Tugger Toys All Rights Reserved.
+        }
+
+        language {
+            enable = 0
+        }
     }
 
     fluidtemplate {
-        # cat=bootstrap package: templates/100/100; type=string; label=Layout Root Path: Path to layouts
         layoutRootPath = EXT:tuggertoys/Resources/Private/Layouts/Page/
-        # cat=bootstrap package: templates/100/110; type=string; label=Partial Root Path: Path to partials
-        partialRootPath = EXT:tuggertoys/Resources/Private/Layouts/Page/
-        # cat=bootstrap package: templates/100/120; type=string; label=Template Root Path: Path to templates
-        templateRootPath = EXT:tuggertoys/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:tuggertoys/Resources/Private/Partials/Page/
+        templateRootPath = EXT:tuggertoys/Resources/Private/Templates/Page/
+    }
+
+    meta {
+        description = Tugger Toys is dedicated to making and reviewing the best, safest and most durable toys/products for dogs.
+        keywords = best dog toys, dog toys, dog, dogs, westie, chew toys, fetching, tugging, squeaky
     }
 }
+
+######################
+### SASS VARIABLES ###
+######################
+plugin.bootstrap_package.settings.scss.grid-float-breakpoint = 850px
+#plugin.bootstrap_package.settings.scss.navbar-heights = (xs: 81px, sm: 81px, md: 115px, lg: 150px, xl: 150px)
+plugin.bootstrap_package.settings.scss.navbar-heights = (xs: 90px, sm: 110px, md: 150px, lg: 150px, xl: 150px)
+#plugin.tuggertoys.settings.scss.navbar-heights = (xs: 150px, sm: 150px, md: 150px, lg: 150px, xl: 150px)
+
+plugin.bootstrap_package.settings.scss.grid-breakpoints = (xs: 0, sm: 576px, md: 768px, lg: 850px, xl: 1200px)
+plugin.bootstrap_package.settings.scss.container-max-widths = (sm: 540px, md: 720px, lg: 820px, xl: 1140px)
+plugin.bootstrap_package.settings.scss.amazon-img-max-widths = (sm: 540px, md: 720px, lg: 820px, xl: 1140px)
+plugin.bootstrap_package.settings.scss.enable-rounded = true
+
+plugin.bootstrap_package.settings.scss.gray-900 = #4c4c4c
+plugin.bootstrap_package.settings.scss.dark = #4c4c4c
+
+###########################
+### Frame Inner Spacing ###
+###########################
+plugin.bootstrap_package.settings.scss.frame-inner-spacing = 1rem
