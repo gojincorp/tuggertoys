@@ -38,12 +38,12 @@ page {
 ######################
 ### SASS VARIABLES ###
 ######################
-plugin.bootstrap_package.settings.scss.grid-float-breakpoint = 850px
+#plugin.bootstrap_package.settings.scss.grid-float-breakpoint = 850px
 #plugin.bootstrap_package.settings.scss.navbar-heights = (xs: 81px, sm: 81px, md: 115px, lg: 150px, xl: 150px)
-plugin.bootstrap_package.settings.scss.navbar-heights = (xs: 90px, sm: 110px, md: 150px, lg: 150px, xl: 150px)
+#plugin.bootstrap_package.settings.scss.navbar-heights = (xs: 90px, sm: 110px, md: 150px, lg: 150px, xl: 150px)
 #plugin.tuggertoys.settings.scss.navbar-heights = (xs: 150px, sm: 150px, md: 150px, lg: 150px, xl: 150px)
 
-plugin.bootstrap_package.settings.scss.grid-breakpoints = (xs: 0, sm: 576px, md: 768px, lg: 850px, xl: 1200px)
+#plugin.bootstrap_package.settings.scss.grid-breakpoints = (xs: 0, sm: 576px, md: 768px, lg: 850px, xl: 1200px)
 plugin.bootstrap_package.settings.scss.container-max-widths = (sm: 540px, md: 720px, lg: 820px, xl: 1140px)
 plugin.bootstrap_package.settings.scss.amazon-img-max-widths = (sm: 540px, md: 720px, lg: 820px, xl: 1140px)
 plugin.bootstrap_package.settings.scss.enable-rounded = true

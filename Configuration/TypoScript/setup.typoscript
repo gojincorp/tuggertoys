@@ -49,3 +49,49 @@ page {
     	p:domain_verify = ce3200e91926f6b5fc1ac2ec40b77aa0
     }
 }
+
+### Template ###
+tt_content.slickcarousel {
+    templateRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        10 = EXT:tuggertoys/Resources/Private/Layouts/CeWrap/
+    }
+}
+tt_content.slickcarouselbasic {
+    templateRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        10 = EXT:tuggertoys/Resources/Private/Layouts/CeWrap/
+    }
+}
+tt_content.slickcarouselsync {
+    templateRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        10 = EXT:tuggertoys/Resources/Private/Layouts/CeWrap/
+    }
+}
+tt_content.slickcarouselbgimg {
+    templateRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        20 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        10 = EXT:tuggertoys/Resources/Private/Layouts/CeWrap/
+    }
+}

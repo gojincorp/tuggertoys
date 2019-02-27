@@ -16,7 +16,7 @@
     <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
     </div>
     <div class="row" style="margin: 0px;">
-    <div id="page-content" class="bp-page-content main-section col-12" style="padding: 0px;">
+    <div id="page-content" class="bp-page-content main-section col-12" style="padding: 12px;">
         <!--TYPO3SEARCH_begin-->
         <f:render section="Main" />
         <!--TYPO3SEARCH_end-->
@@ -36,28 +36,7 @@
     <f:render partial="Structure/ScrollTop" arguments="{_all}" />
 </div>
 
-<!-- Modal https://codepen.io/JacobLett/pen/xqpEYE -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      
-      <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>        
-        <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
-</div>
-        
-        
-      </div>
-
-    </div>
-  </div>
-</div> 
+<f:render partial="Structure/Modal" />
 
 <div class="device-xs visible-xs" id="show-xs"></div>
 <div class="device-sm visible-sm" id="show-sm"></div>

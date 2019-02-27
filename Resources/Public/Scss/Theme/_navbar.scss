@@ -5,27 +5,10 @@
 // other navbar variations.
 
 .navbar {
-  flex-direction: column;
-  align-items: start;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
-//
-// Transision
-//
-@media (min-width: ($grid-float-breakpoint)) {
-	.navbar {
-	  align-items: center;
-	}
-}
-
-//
-// Toggler
-//
-.navbar-toggler {
-    justify-content: flex-start;
-    padding-left: 2.5rem;
-}
 
 //
 // Position Fixed
@@ -35,16 +18,12 @@
     font-weight: 800;
 }
 
-.navbar-mainnavigation .navbar-brand {
-    margin-right: 0px;
-}
-
-
 //
 // Brand
 //
 .navbar-mainnavigation {
     .navbar-brand-image {
+    	margin-right: 0px;
         padding: 0px;
         img {
 //          max-height: map-get($navbar-heights, xs) - 0; 
@@ -97,35 +76,15 @@
     }
 }
 
-//
-// Breakpoint
-// Bootstrap 4 only allows breakpoints to be fixed at viewports this removes
-// a lot of flexibility, so we introduce the legacy float breakpoint again.
-//
-@media (max-width: ($grid-float-breakpoint - 1)) {
-    .navbar-mainnavigation {
-        &.navbar-default.ttoys.ttoys-navbar {
-        	.ttoys.ttoys-header-top {
-	            a:not(.active) {
-	                color: $navbar-light-color;
-	                @include hover-focus {
-	                    color: $navbar-light-hover-color;
-	                }
-	            }
-        	}
-        }
-        &.navbar-inverse.ttoys.ttoys-navbar {
-        	.ttoys.ttoys-header-top {
-	            a:not(.active) {
-	                color: $navbar-light-color;
-	                @include hover-focus {
-	                    color: $navbar-light-hover-color;
-	                }
-	            }
-	        }
+.ttoys.ttoys-header-top {
+    a:not(.active) {
+        color: $link-color;
+        @include hover-focus {
+            color: $link-hover-color;
         }
     }
 }
+
 @media (min-width: $grid-float-breakpoint) {
     .navbar-mainnavigation {
         flex-flow: column nowrap;

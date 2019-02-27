@@ -30,23 +30,6 @@
 //
 @import "navbar";
 
-//
-// Native CSS
-//
-//.container.ttoys.ttoys-logo {
-//	display: block;
-//}
-//.container-fluid.ttoys.ttoys-main {
-//  padding-right: 0px;
-//  padding-left: 0px;
-//}
-body {
-	margin: 0px;
-	//background-color: black;
-}
-*, *::before, *::after {
-    //box-sizing: content-box; 
-}
 
 #page-header {
 	z-index: 2;
@@ -283,4 +266,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: normal;
   color:#fff;
   opacity:1;
+}
+
+.modal-dialog {
+	padding: 0px 50px;
 }
