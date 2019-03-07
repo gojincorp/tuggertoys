@@ -1,3 +1,22 @@
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            # register your own additional configuration
+            # choose a number higher than 30 (below is reserved)
+            200 = EXT:tuggertoys/Configuration/Yaml/CustomFormSetup.yaml
+        }
+    }
+}
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            # register your own additional configuration
+            # choose a number higher than 30 (below is reserved)
+            200 = EXT:tuggertoys/Configuration/Yaml/CustomFormSetup.yaml
+        }
+    }
+}
+
 page {
 	10.dataProcessing.30 {
 		special.range = 1|-1

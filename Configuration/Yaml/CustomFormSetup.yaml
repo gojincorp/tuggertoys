@@ -1,0 +1,14 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  30: 'EXT:tuggertoys/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  30: 'EXT:tuggertoys/Resources/Private/Partials/Form/'
+                layoutRootPaths:
+                  30: 'EXT:tuggertoys/Resources/Private/Layouts/Form/'

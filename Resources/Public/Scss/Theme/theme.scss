@@ -31,6 +31,14 @@
 @import "navbar";
 
 
+//
+// Feedback
+//
+.valid-feedback,
+.invalid-feedback {
+    display: none;
+}
+
 #page-header {
 	z-index: 2;
 }
@@ -270,4 +278,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .modal-dialog {
 	padding: 0px 50px;
+}
+
+.frame-type-slickcarouselsync .modal-dialog {
+	max-width:1200px;
 }
