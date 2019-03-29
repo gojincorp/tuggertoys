@@ -9,3 +9,16 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@mixin make-petfinder-card() {
+}
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-petfinder-card-flex-widths($flex-widths: $petfinder-card-flex-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $card-flex-width in $flex-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      flex: $card-flex-width;
+      max-width: $card-flex-width;
+    }
+  }
+}

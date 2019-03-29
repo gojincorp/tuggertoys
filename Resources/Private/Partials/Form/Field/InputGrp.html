@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:format.raw>
+<f:if condition="{element.properties.bsInputGroupPrependFontAwesome}">
+	<f:then>
+		<div class="input-group">
+			<div class="input-group-prepend"><span class="input-group-text" id="{element.properties.bsInputGroupPrependFontAwesome}-{element.identifier}"><i class="fas {element.properties.bsInputGroupPrependFontAwesome} fa-lg"></i></span></div>
+			{inputGrpContent}
+		</div>
+	</f:then>
+	<f:else>
+		{inputGrpContent}
+	</f:else>
+</f:if>
+</f:format.raw>
+</html>

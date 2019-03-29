@@ -12,3 +12,16 @@ TYPO3:
                   30: 'EXT:tuggertoys/Resources/Private/Partials/Form/'
                 layoutRootPaths:
                   30: 'EXT:tuggertoys/Resources/Private/Layouts/Form/'
+            SingleSelect:
+                properties:
+                    containerClassAttribute: 'ttForm-container'
+                    elementClassAttribute: 'ttForm-singleselect'
+                    bsInputGroupPrependFontAwesome: ''
+            GridRow:
+                properties:
+                    elementClassAttribute: 'form-row row ttoys'
+            mixins:
+                formElementMixins:
+                    FormElementMixin:
+                        properties:
+                            hideStandardLabels: 1

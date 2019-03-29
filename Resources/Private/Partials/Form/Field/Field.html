@@ -2,20 +2,31 @@
 <f:form.validationResults for="{element.rootForm.identifier}.{element.identifier}">
     <div class="form-element form-element-{element.identifier} form-element-type-{element.type -> bk2k:format.lowercaseDashed()} form-group{f:if(condition: '{validationResults.errors.0}', then: ' has-error')}">
         <div class="{element.properties.containerClassAttribute}">
-            <f:if condition="{doNotShowLabel} != 1">
+            <f:if condition="{doNotShowLabel} != 1 && {element.properties.hideStandardLabels} != 0">
                 <label for="{element.uniqueIdentifier}">{formvh:translateElementProperty(element: element, property: 'label')}<f:if condition="{element.required}"><f:render partial="Field/Required" /></f:if></label>
             </f:if>
-            <f:format.raw>
-                {elementContent}
-                <f:if condition="{validationResults.flattenedErrors}">
-                    <div class="invalid-feedback">
-                        <f:for each="{validationResults.errors}" as="error">
-                            {formvh:translateElementError(element: element, code: error.code, arguments: error.arguments, defaultValue: error.message)}
-                            <br>
-                        </f:for>
-                    </div>
-                </f:if>
-            </f:format.raw>
+	            <f:format.raw>
+            <f:render partial="Field/InputGrp" arguments="{element: element}" contentAs="inputGrpContent">
+	                {elementContent}
+	                <f:if condition="{validationResults.flattenedErrors}">
+	                    <div class="invalid-feedback">
+	                        <f:for each="{validationResults.errors}" as="error">
+	                            {formvh:translateElementError(element: element, code: error.code, arguments: error.arguments, defaultValue: error.message)}
+	                            <br>
+	                        </f:for>
+	                    </div>
+	                    <f:else>
+				            <f:for each="{element.properties.validationErrorMessages}" as="myObj" iteration="iteration">
+								 <f:if condition="{iteration.isFirst}">
+								 	<div class="invalid-feedback">
+								    	{myObj.message}
+								    </div>
+								 </f:if>
+							</f:for>
+	                    </f:else>
+	                </f:if>
+            </f:render>
+	            </f:format.raw>
             <f:if condition="{element.properties.elementDescription}">
                 <small class="form-text text-muted">{formvh:translateElementProperty(element: element, property: 'elementDescription')}</small>
             </f:if>
